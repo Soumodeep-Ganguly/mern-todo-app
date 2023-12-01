@@ -1,0 +1,47 @@
+@import './../../styles/color.scss';
+
+.subnavContainer {
+    display: flex;
+    background-color: $c-white;
+    // width: fit-content;
+    border-radius: 5px;
+    border: 1px solid $c-dark;
+    color: $c-dark;
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &.fit {
+        width: fit-content;
+    }
+
+    .subnavItem {
+        display: flex;
+        gap: 5px;
+        font-weight: 500;
+        padding: 5px 10px;
+
+        &.active {
+            color: $c-primary;
+            background-color: $c-dark;
+            border-radius: 5px;
+            outline: 1px solid $c-dark;
+        }
+
+        .title {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.dark .subnavContainer {
+    background-color: $c-dark;
+    border-color: $c-primary;
+    color: $c-primary;
+
+    .subnavItem.active {
+        color: $c-white;
+        background-color: $c-primary;
+        outline-color: $c-primary;
+    }
+}

@@ -1,0 +1,30 @@
+@import './../../styles/color.scss';
+
+.card {
+    background-color: $c-dark;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  
+    &.dark {
+      background-color: $c-primary !important;
+      color: white;
+    }
+  
+    .title {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+  
+    .description {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+  
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
