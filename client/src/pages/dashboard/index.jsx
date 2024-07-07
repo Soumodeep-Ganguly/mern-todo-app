@@ -94,7 +94,7 @@ const Dashboard = () => {
                     />
                 ))}
             </div>
-            <div className='pagination'>
+            {tasks?.length > 0 && <div className='pagination'>
                 <div className={`prev ${page === 0 && "disable"}`} onClick={() => {
                     if(page !== 0) setPage(page - 1)
                 }}>
@@ -108,7 +108,7 @@ const Dashboard = () => {
                 }}>
                     <UilAngleRight />
                 </div>
-            </div>
+            </div>}
             <Add 
                 dark={authContext.dark?"dark":""}
                 isModalOpen={isModalOpen}
